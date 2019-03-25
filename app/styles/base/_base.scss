@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: unset;
+    padding: 0;
+    border: none;
+}
+
+html {
+    box-sizing: border-box;
+    font: 62.5%/1.618 $font-base; // sets default font size to 10px, line-height to golden ratio, font-family to Roboto
+    height: 100%;
+}
+
+body {
+    background-image: url('../images/pattern.svg')
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}

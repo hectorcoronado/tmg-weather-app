@@ -1,0 +1,13 @@
+// Color variables
+
+// grayscale:
+$white: #fffefc;
+$black: #222222;
+
+// Font variables
+$font-sans-serif: "Roboto", Helvetica, Arial, sans-serif !default;
+$font-serif:       "Merriweather", Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-base:        $font-sans-serif;
+$font-color:       $black !default;

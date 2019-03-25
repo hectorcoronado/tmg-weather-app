@@ -11,7 +11,17 @@ module.exports = {
     module: {
         rules: [
             { test: /\.(js)$/, use: 'babel-loader' },
-            { test: /\.css$/, use: ['style-loader', 'css-loader'] }
+            { test: /\.svg/, use: {
+                    loader: 'svg-url-loader',
+                    options: {}
+                }
+            },
+            { test: /\.?css$/, use: [
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
+                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                ]
+            }
         ]
     },
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',

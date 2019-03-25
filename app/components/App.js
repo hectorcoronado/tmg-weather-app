@@ -4,7 +4,7 @@ var Router = ReactRouter.BrowserRouter
 var Route = ReactRouter.Route
 var Switch = ReactRouter.Switch
 
-var Home = require('./Home')
+var Search = require('./Search')
 
 class App extends React.Component {
     render () {
@@ -12,7 +12,7 @@ class App extends React.Component {
             <Router>
                 <div className="container">
                     <Switch>
-                        <Route exact path='/' component={Home} />
+                        <Route exact path='/' component={Search} />
                         <Route render={function () { return <p>not found</p>}} />
                     </Switch>
                 </div>
