@@ -1,0 +1,16 @@
+.search {
+    display: flex;
+    flex-direction: column;
+
+    &__input {
+        @include input-default;
+        @include margin(null, null, 1rem, null);
+        
+        align-self: center;
+    }
+
+    &__button {
+        align-self: center;
+        @include button-green;
+    }
+}

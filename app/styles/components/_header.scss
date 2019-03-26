@@ -1,6 +1,25 @@
 .header {
+    background: #c94b4b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
     align-self: flex-start;
     background-color: $white;
-    height: 10rem;
     width: 100%;
+
+    &__text {
+        @include margin(null, null, null, 1rem);
+        color: $white;
+    }
+
+    &__input {
+        @include input-default;
+        @include margin(null, null, null, auto);
+    }
+
+    &__button {
+        @include button-green;
+        @include margin(null, 1rem, null, 1rem);
+    }
 }
