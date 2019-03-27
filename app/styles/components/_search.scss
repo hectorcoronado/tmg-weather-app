@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: column;
 
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__input {
         @include input-default;
         @include margin(null, null, 1rem, null);

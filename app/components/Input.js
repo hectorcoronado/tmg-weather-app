@@ -4,15 +4,19 @@ var PropTypes = require('prop-types')
 function Input (props) {
     return (
         <input
+            autoComplete='off'
             className={props.className}
-            placeholder='city, state'
             onChange={props.handleInputChange}
+            placeholder='city, state'
+            type='text'
+            value={props.cityName}
         />
     )
 }
 
 Input.propType = {
-    className: PropTypes.string,
+    cityName: PropTypes.string.isRequired,
+    className: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired
 }
 
