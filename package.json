@@ -7,6 +7,9 @@
         "presets": [
             "@babel/preset-env",
             "@babel/preset-react"
+        ],
+        "plugins": [
+            "@babel/plugin-proposal-class-properties"
         ]
     },
     "scripts": {
@@ -18,13 +21,16 @@
     "author": "Hector Coronado",
     "license": "ISC",
     "dependencies": {
-        "prop-types": "^15.7.1",
+        "axios": "^0.18.0",
+        "dotenv-webpack": "^1.7.0",
+        "prop-types": "^15.7.2",
         "react": "^16.8.1",
         "react-dom": "^16.8.1",
         "react-router-dom": "^4.3.1"
     },
     "devDependencies": {
         "@babel/core": "^7.4.0",
+        "@babel/plugin-proposal-class-properties": "^7.4.0",
         "@babel/preset-env": "^7.4.2",
         "@babel/preset-react": "^7.0.0",
         "babel-loader": "^8.0.5",
