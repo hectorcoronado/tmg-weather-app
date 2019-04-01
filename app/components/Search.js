@@ -30,15 +30,16 @@ class Search extends React.Component {
             <div className='search'>
                 <h1 className='main-text'>enter a city and state</h1>
                 <form
-                    className='search__form'
-                    onSubmit={this.handleSubmit}>
+                    className='search__form'>
                     <Input
                         cityName={this.state.cityName}
                         className='search__input'
                         handleInputChange={this.handleInputChange}
                     />
                     <Button
-                        className='search__button'
+                        className='button search__button'
+                        onClick={this.handleSubmit}
+                        to={'/forecast?city=' + this.state.cityName}
                     />
                 </form>
             </div>

@@ -7,7 +7,7 @@ function Input (props) {
             autoComplete='off'
             className={props.className}
             onChange={props.handleInputChange}
-            placeholder='city, state'
+            placeholder='u.s. city or zip'
             type='text'
             value={props.cityName}
         />

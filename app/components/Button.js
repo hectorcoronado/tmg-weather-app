@@ -1,11 +1,15 @@
 var React = require('react')
+var Link = require('react-router-dom').Link
 var PropTypes = require('prop-types')
 
 function Button (props) {
     return (
-        <button className={props.className}>
-            {props.text}
-        </button>
+        <Link 
+            className={props.className}
+            onClick={props.onClick}
+            to={props.to}>
+                {props.text}
+        </Link>
     )
 }
 
@@ -16,6 +20,7 @@ Button.propType = {
 
 Button.defaultProps = {
     className: 'button',
-    text: 'get weather'
+    text: 'get weather',
+    to: '/'
 }
 module.exports = Button
