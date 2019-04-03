@@ -12,9 +12,9 @@ module.exports = {
         var currentWeatherEndpoint = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&type=accurate&APPID=' + API_KEY
     
         return axios.get(currentWeatherEndpoint)
-            .then(function(data) {
-                console.log(data)
-                return data
+            .then(function(response) {
+                console.log(response.data)
+                return response.data
             })
             .catch(handleError)
     },
@@ -23,9 +23,9 @@ module.exports = {
         var fiveDayForecastEndpoint = 'https://api.openweathermap.org/data/2.5/forecast/daily?q=' + cityName + '&type=accurate&APPID=' + API_KEY + '&cnt=5'
 
         return axios.get(fiveDayForecastEndpoint)
-            .then(function(data) {
-                console.log(data)
-                return data
+            .then(function(response) {
+                console.log(response.data)
+                return response.data
             })
             .catch(handleError)
     }

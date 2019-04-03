@@ -21,8 +21,6 @@ class Search extends React.Component {
 
     handleSubmit (e) {
         e.preventDefault()
-
-        api.getCurrentWeather(this.state.cityName)
     }
     
     render () {
@@ -30,7 +28,8 @@ class Search extends React.Component {
             <div className='search'>
                 <h1 className='main-text'>enter a city and state</h1>
                 <form
-                    className='search__form'>
+                    className='search__form'
+                    onSubmit={this.handleSubmit}>
                     <Input
                         cityName={this.state.cityName}
                         className='search__input'
@@ -38,7 +37,7 @@ class Search extends React.Component {
                     />
                     <Button
                         className='button search__button'
-                        onClick={this.handleSubmit}
+                        // onClick={this.handleSubmit}
                         to={'/forecast?city=' + this.state.cityName}
                     />
                 </form>

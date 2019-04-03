@@ -14,8 +14,7 @@ function Button (props) {
 }
 
 Button.propType = {
-    className: PropTypes.string,
-    onClick: PropTypes.func.isRequired
+    className: PropTypes.string
 }
 
 Button.defaultProps = {
