@@ -16,9 +16,11 @@ class Forecast extends React.Component {
     componentDidMount () {
         var queryParam = queryString.parse(this.props.location.search)
 
-        console.log(queryParam)
-        api.getCurrentWeather(queryParam.city)
+        api.getFiveDayForecast(queryParam.city)
             .then(function(results) {
+                console.log('results')
+                console.log(results)
+
                 if (results === null) {
                     return this.setState(function () {
                         return {
@@ -38,10 +40,16 @@ class Forecast extends React.Component {
     }
 
     render () {
-        var forecast = JSON.stringify(this.state.forecast)
+        var forecast = this.state.forecast
         return (
             <div>
-                { this.state.loading ? <h2>Loading</h2> : <p>{forecast}</p>}
+                { this.state.loading ? <h2>Loading</h2> : forecast.map(function(el) {
+                    console.log('el')
+                    console.log(el)
+                    return (
+                        <h3>{el}</h3>
+                    )
+                })}
             </div>
         )
     }

@@ -6,7 +6,6 @@ function Button (props) {
     return (
         <Link 
             className={props.className}
-            onClick={props.onClick}
             to={props.to}>
                 {props.text}
         </Link>
@@ -14,7 +13,9 @@ function Button (props) {
 }
 
 Button.propType = {
-    className: PropTypes.string
+    className: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired
 }
 
 Button.defaultProps = {

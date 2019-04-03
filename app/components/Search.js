@@ -37,7 +37,6 @@ class Search extends React.Component {
                     />
                     <Button
                         className='button search__button'
-                        // onClick={this.handleSubmit}
                         to={'/forecast?city=' + this.state.cityName}
                     />
                 </form>
